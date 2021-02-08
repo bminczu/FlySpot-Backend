@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
     def create
         post = Post.new(post_params)
-        if Post.save
+        if post.save
             render json: post, except: [:created_at, :updated_at]
         else
             render json: {error: "Something went wrong."}
@@ -20,9 +20,9 @@ class PostsController < ApplicationController
     end
 
     def update
-        post = Post.find(params[:id])
+        post = Post.find_by_id(params[:id])
     
-        if Post.update(post_params)
+        if post.update(post_params)
             render json: post
         else
             render json: {error: "Something went wrong."}
@@ -30,8 +30,8 @@ class PostsController < ApplicationController
     end
 
     def destroy
-        post = Post.find(params[:id])
-        if Post.destroy
+        post = Post.find_by(params[:id])
+        if post.destroy
             render json: post
         else
             render json: {error: "Something went wrong."}
@@ -41,6 +41,6 @@ class PostsController < ApplicationController
     private 
 
     def post_params
-        params.require(:post).permit(:user_id, :address, :latitude, :longitude, :category, :airspace, :description, :authors_rating, :video)
+        params.require(:post).permit(:title, :user_id, :address, :latitude, :longitude, :category, :airspace, :description, :authors_rating, :video)
     end
 end

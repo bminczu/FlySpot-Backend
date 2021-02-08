@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
 
     def show
         review = Review.find_by(params[:id])
-        render json: review.to_json(include: [:tasks])
+        render json: review
     end
 
     def create
@@ -42,7 +42,7 @@ class ReviewsController < ApplicationController
     private 
 
     def review_params
-        params.require(:review).permit(:user_id, :post_id, :user_id, :comment)
+        params.require(:review).permit(:user_id, :post_id, :user_rating, :comment)
     end
 
     
