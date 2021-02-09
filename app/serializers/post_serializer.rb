@@ -1,4 +1,4 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :id
   has_many :reviews
+  attributes :id, :title, :user_id, :address, :latitude, :longitude, :category, :airspace, :description, :authors_rating, :video
 end
