@@ -7,13 +7,13 @@ class ReviewsController < ApplicationController
     end
 
     def show
-        review = Review.find_by(params[:id])
+        review = Review.find_by_id(params[:id])
         render json: review
     end
 
     def create
         review = Review.new(review_params)
-        if Review.save
+        if review.save
             render json: review, except: [:created_at, :updated_at]
         else
             render json: {error: "Something went wrong."}
@@ -21,8 +21,8 @@ class ReviewsController < ApplicationController
     end
 
     def updated
-        review = Review.find_by(params[:id])
-        if Review.update(review_params)
+        review = Review.find_by_id(params[:id])
+        if review.update(review_params)
             render json: review
         else
             render json: {error: "Something went wrong."}
@@ -30,8 +30,8 @@ class ReviewsController < ApplicationController
     end
 
     def destroy
-        review = Review.find_by(params[:id])
-        if Review.destroy
+        review = Review.find_by_id(params[:id])
+        if review.destroy
             render json: review
         else
             render json: {error: "Something went wrong."}

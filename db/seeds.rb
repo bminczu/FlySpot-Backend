@@ -22,5 +22,9 @@ post4 = Post.create(title:"Over Water", user_id:user3.id, address:"7777 montrose
 
 
 review1 = Review.create(user_id:user2.id, post_id:post1.id, user_rating:4, comment:"definitely a cool spot")
-review2 = Review.create(user_id:user1.id, post_id:post2.id, user_rating:2, comment:"kinda lame")
-review3 = Review.create(user_id:user1.id, post_id: post3.id, user_rating:3, comment:"it was okay")
+review4 = Review.create(user_id:user2.id, post_id:post2.id, user_rating:2, comment:"kinda lame tbh")
+review5 = Review.create(user_id:user3.id, post_id:post2.id, user_rating:4, comment:"got kicked out by security")
+review6 = Review.create(user_id:user4.id, post_id:post2.id, user_rating:5, comment:"dope spot lots of different gaps and fatures")
+review7 = Review.create(user_id:user3.id, post_id:post2.id, user_rating:2, comment:"Sick post dood")
+review2 = Review.create(user_id:user4.id, post_id:post2.id, user_rating:5, comment:"Looks like a cool spot ill have to go there sometime")
+review3 = Review.create(user_id:user4.id, post_id: post3.id, user_rating:3, comment:"it was okay")
