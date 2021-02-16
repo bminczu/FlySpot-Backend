@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :users
   resources :reviews
   resources :posts
+  post 'rails/active_storage/direct_uploads', to: 'direct_uploads#create'
 
 
   namespace :api do 
