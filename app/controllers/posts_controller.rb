@@ -7,7 +7,8 @@ class PostsController < ApplicationController
 
     def show
         post = Post.find_by(params[:id])
-        render json: post
+        image = rails_blob_path(post.image)
+        render json: {post: post, image: image}
     end
 
     def create
@@ -38,6 +39,13 @@ class PostsController < ApplicationController
         end
     end
 
+    def update_image
+        post = Post.find(params[:id])
+        post.update(image: params[:image])
+        image_url = rails_blob_path(post.image) 
+        render json: {post: post, image: image_url}
+
+    end
     private 
 
     def post_params
