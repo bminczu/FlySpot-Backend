@@ -13,6 +13,7 @@ class PostsController < ApplicationController
 
     def create
         post = Post.new(post_params)
+      
         if post.save
             render json: post, except: [:created_at, :updated_at]
         else
@@ -49,6 +50,6 @@ class PostsController < ApplicationController
     private 
 
     def post_params
-        params.require(:post).permit(:title, :user_id, :address, :latitude, :longitude, :category, :airspace, :description, :authors_rating, :video)
+        params.require(:post).permit(:image_url, :title, :user_id, :address, :latitude, :longitude, :category, :airspace, :description, :authors_rating, :video)
     end
 end
