@@ -136,12 +136,60 @@ authors_rating: 4,
 video: ""
 )
 
+# REVIEWS
+
+review1 = Review.create(
+    user_id: 67,
+    post_id: 167,
+    user_rating: 5,
+    comment: "This place was awesome. I just went there this past weekend. You weren't kidding about it being sketchy! Thanks for the heads up."
+)
+ review2 = Review.create(
+    user_id: 67,
+    post_id: 167,
+    user_rating: 5,
+    comment: "I got some awesome shots here last week! I'll share the youtube link later today. Thanks for sharing it."
+ )
+  review3 = Review.create(
+    user_id: 67,
+    post_id: 167,
+    user_rating: 5,
+    comment: "This is probably my favorite spot to fly now. I was here for like two hours last night and didn't wanna leave but then I ran out of batteries.."
+  )
+  
+  
+  review4 = Review.create(
+    user_id: 67,
+    post_id: 167,
+    user_rating: 4,
+    comment: "Gonna hit this spot tonight! Looks awesome"
+  )
 
 
-# review1 = Review.create(user_id:user2.id, post_id:post1.id, user_rating:4, comment:"definitely a cool spot")
-# review4 = Review.create(user_id:user2.id, post_id:post2.id, user_rating:2, comment:"kinda lame tbh")
-# review5 = Review.create(user_id:user3.id, post_id:post2.id, user_rating:4, comment:"got kicked out by security")
-# review6 = Review.create(user_id:user4.id, post_id:post2.id, user_rating:5, comment:"dope spot lots of different gaps and features")
-# review7 = Review.create(user_id:user3.id, post_id:post2.id, user_rating:2, comment:"Sick post dood")
-# review2 = Review.create(user_id:user4.id, post_id:post2.id, user_rating:5, comment:"Looks like a cool spot ill have to go there sometime")
-# review3 = Review.create(user_id:user4.id, post_id: post3.id, user_rating:3, comment:"it was okay")
+  review5 = Review.create(
+    user_id: 64,
+    post_id: 176,
+    user_rating: 5,
+    comment: "Awesome spot. Thanks for the tip on the parking. Really helped me out!"
+  )
+ 
+  review6 = Review.create(
+    user_id: 64,
+    post_id: 176,
+    user_rating: 3,
+    comment: "I can't wait to check this spot out! Looks so cool."
+  )
+
+
+  review7 = Review.create(
+    user_id: 64,
+    post_id: 176,
+    user_rating: 4,
+    comment: "I plan on coming to this spot later this week. I'll let you know how it goes. Thanks for sharing!"
+  )
+ review8 = Review.create(
+    user_id: 64,
+    post_id: 176,
+    user_rating: 3,
+    comment: "Cool spot but kind of boring. I did get some cool footage of the city though!"
+ )
