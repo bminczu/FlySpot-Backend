@@ -9,5 +9,4 @@ class Post < ApplicationRecord
         end
     end
 
-    # validates latitude, numericality: { only_integer: true }
 end
