@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.9'
+ruby '2.6.1'
 
 # Bundle edge Raibundle update --rubyls instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
@@ -17,6 +17,7 @@ gem 'active_model_serializers' , '~> 0.10.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'newrelic_rpm'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'jwt'
