@@ -34,11 +34,12 @@ common: &default_settings
 development:
   <<: *default_settings
   app_name: testing (Development)
+  monitor_mode: true
 
 test:
   <<: *default_settings
   # It doesn't make sense to report to New Relic from automated test runs.
-  monitor_mode: false
+  monitor_mode: true
 
 staging:
   <<: *default_settings
